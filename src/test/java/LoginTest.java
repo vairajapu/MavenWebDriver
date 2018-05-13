@@ -10,7 +10,6 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
-
 public class LoginTest {
 
 	public static WebDriver driver;
@@ -27,7 +26,7 @@ public class LoginTest {
 		driver.manage().timeouts().implicitlyWait(20L, TimeUnit.SECONDS);
 		driver.findElement(By.xpath(".//*[@id='email']")).sendKeys("vairajapu@gmail.com");
 		driver.findElement(By.xpath(".//*[@id='pass']")).sendKeys("vai2017raj");
-		//driver.findElement(By.xpath(".//*[@id='loginbutton']")).click();
+		driver.findElement(By.xpath(".//*[@id='loginbutton']")).click();
 		}
 	
 	@AfterTest
